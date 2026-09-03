@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const giftRoutes = require('./routes/giftRoutes');
+const searchRoutes = require('./routes/searchRoutes');
 
 const app = express();
 
@@ -15,5 +16,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/gifts', giftRoutes);
+app.use('/api/search', searchRoutes);
 
 module.exports = app;
